@@ -1,13 +1,28 @@
 # Walnut Creek Aquatics — Pool Relay embed preview
 
 A replica of the City of Walnut Creek
-[Clarke Memorial Swim Center page](https://www.walnutcreekartsrec.org/aquatics/swim-center-hours-programs/clarke-memorial-swim-center)
-with its **lap-swim lane-allocation table replaced by a live [Pool Relay](https://www.poolrelay.com)
-calendar**, plus the current lesson session and the Larkey summer season.
+[aquatics page](https://www.walnutcreekartsrec.org/aquatics) with **one live
+[Pool Relay](https://www.poolrelay.com) calendar placed above its six links** — both swim centers and
+every program, before you click anything.
 
 Not an official City of Walnut Creek page. It says so in a ribbon across the top.
 
 ## The thing being demonstrated
+
+The published aquatics page is a hub of six cards: Larkey, Clarke Memorial, Swim Lessons, Pool
+Rentals, Swim Teams, Swim Passes. Every one is a door to somewhere else.
+
+To answer one ordinary question — *"can my seven-year-old have a lesson at a time when I can also
+swim laps?"* — a parent has to open Clarke for the lane table, open Swim Lessons for level
+descriptions that carry no times, follow **Group Lessons** out to the city's registration system,
+expand **each of seven levels** one at a time, back out to Private Lessons, then go to Swim Teams and
+on to the Masters team's own site and its Practice Times page. **Four websites and about a dozen
+clicks**, ending with four schedules to compare in your head.
+
+One calendar at the top answers it by looking at Tuesday. The six cards stay exactly where they
+were — nothing is taken away, they just stop being the only way in.
+
+## The arithmetic that makes it worth doing
 
 Walnut Creek does something unusual and genuinely good: it publishes lap swim as a **table of lane
 counts** rather than as opening hours.
@@ -41,16 +56,36 @@ table cannot see it; a reader of the calendar cannot miss it.
 
 | | |
 |---|---|
-| Clarke — this week | [`/embed/bgGoKLrxK8AcpRaiffiEyG`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) |
-| Learn-to-swim bays | [`/embed/EHMWrlAQ2CfgWIKRBXKQAC`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) |
-| Larkey — the summer week | [`/v/LSVJBxGGIxadLGeN6FzILO`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) — linked, not embedded: Larkey is closed, so the current week is empty by design |
+| On the page | [`/embed/HCHCA8lwePKxAf6EXfIB3H`](https://www.poolrelay.com/v/HCHCA8lwePKxAf6EXfIB3H) — both centers, every program |
+| Clarke alone | [`/v/bgGoKLrxK8AcpRaiffiEyG`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) — with a Pools filter |
+| Wading-pool teaching bays | [`/v/EHMWrlAQ2CfgWIKRBXKQAC`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) |
+| Larkey alone | [`/v/LSVJBxGGIxadLGeN6FzILO`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) |
 
-The Clarke view carries a **Pools** page filter (50-Meter / 25-Meter / Wading) so one embed serves
-the whole facility, and each event square prints its group and its **lane count** — which is what
-makes the 8 + 12 complement legible at a glance.
+Each event square prints its group and its **lane count**, which is what makes the 8 + 12 complement
+legible at a glance.
 
-*Build note for the next one of these:* a view takes its date range from a **Time level in its page
-filters**, so put one there before publishing.
+### Scoping one calendar to two facilities
+
+`save_view` scopes a zone to a single class, and Clarke and Larkey are separate top-level facilities
+with no shared parent — so the Facilities menu would have offered all 35 facilities in the system.
+The fix is `dimFilters.location`, set by `PATCH /api/views/:id` to the **29 leaf ids** under the two
+centers. The menu then reads exactly:
+
+```
+All · Clarke · Larkey
+```
+
+Two further notes, both learned here:
+
+- A page selection stores an **id**, and this view was created *before* the filter was applied — so it
+  had already stored `fac:belle-haven`, the first facility in the whole system. The sanitizer only
+  fills in an **absent** selection; it does not re-open a stale one. Patch `pageSelections` in the
+  same call.
+- A stored **empty string** means *All*. That is what makes the calendar open on both centers rather
+  than pinned to one, which the page's whole claim depends on.
+
+*Build note:* a view takes its date range from a **Time level in its page filters**, so put one there
+before publishing.
 
 ## What the calendar adds over the published page
 
