@@ -3,7 +3,7 @@
 A replica of the City of Walnut Creek
 [Clarke Memorial Swim Center page](https://www.walnutcreekartsrec.org/aquatics/swim-center-hours-programs/clarke-memorial-swim-center)
 with its **lap-swim lane-allocation table replaced by a live [Pool Relay](https://www.poolrelay.com)
-calendar**, plus the lesson session and the closed Larkey season.
+calendar**, plus the current lesson session and the Larkey summer season.
 
 Not an official City of Walnut Creek page. It says so in a ribbon across the top.
 
@@ -43,14 +43,14 @@ table cannot see it; a reader of the calendar cannot miss it.
 |---|---|
 | Clarke — this week | [`/embed/bgGoKLrxK8AcpRaiffiEyG`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) |
 | Learn-to-swim bays | [`/embed/EHMWrlAQ2CfgWIKRBXKQAC`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) |
-| Larkey — the summer week | [`/embed/LSVJBxGGIxadLGeN6FzILO`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) |
+| Larkey — the summer week | [`/v/LSVJBxGGIxadLGeN6FzILO`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) — linked, not embedded: Larkey is closed, so the current week is empty by design |
 
 The Clarke view carries a **Pools** page filter (50-Meter / 25-Meter / Wading) so one embed serves
 the whole facility, and each event square prints its group and its **lane count** — which is what
 makes the 8 + 12 complement legible at a glance.
 
-Every view needs a **Time level in its page filters** or it renders "add a time level to set the
-date range". Worth remembering: a view is not publishable without one.
+*Build note for the next one of these:* a view takes its date range from a **Time level in its page
+filters**, so put one there before publishing.
 
 ## What the calendar adds over the published page
 
@@ -91,15 +91,6 @@ These are marked on the page and on the calendar entries themselves.
 | **Gap** | Practice times for three of the four teams. **Aquabears** (eight groups, "practices daily at Clarke"), **Aquanuts** (holding the 25m pool year round for synchro) and the summer **Swim Club** publish none. Only Masters does. |
 | **Gap** | Weekend rec swim — still running, and in the 50m or the 25m pool? The page lists it under both. |
 | **Ours** | Larkey's weekday sprayground-only hours are published without dates. We used the Memorial Day–Labor Day season the swim pass names. |
-
-## A Pool Relay improvement this page surfaced
-
-**A closed season renders as a blank week.** Larkey shut after Labor Day, so its calendar is
-correctly empty — and completely uninformative. The city's page at least says *"open weekends only
-through 9/7"*, a sentence a human has to remember to edit and which will be wrong by next spring.
-The calendar already knows the real answer from its own dates and should say **"closed for the
-season, reopens Memorial Day"** rather than showing nothing. The page flags this in a warning
-callout instead of hiding it.
 
 ## What is in Pool Relay behind these pages
 
