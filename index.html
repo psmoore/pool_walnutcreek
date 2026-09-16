@@ -95,7 +95,8 @@
      calendars break out of the 1080px text measure and center on the viewport. */
   .cal{ border:1px solid var(--rule); border-radius:5px; overflow:hidden;
     box-shadow:0 1px 3px rgba(0,0,0,.07); background:#fff; margin:18px 0 10px;
-    width:min(1460px, calc(100vw - 44px)); margin-left:50%; transform:translateX(-50%) }
+    position:relative; left:50%; transform:translateX(-50%);
+    width:min(1460px, calc(100vw - 40px)) }
   .cal iframe{ width:100%; height:700px; border:0; display:block }
   .cal.short iframe{ height:560px }
   .capt{ font-size:14.5px; color:var(--muted); margin:0 0 26px }
