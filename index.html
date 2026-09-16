@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--
+  UNOFFICIAL PREVIEW. Not a City of Walnut Creek website.
+  A replica of walnutcreekartsrec.org/aquatics/swim-center-hours-programs/clarke-memorial-swim-center
+  with the lap-swim LANE ALLOCATION TABLE replaced by a live Pool Relay calendar.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clarke Memorial Swim Center &mdash; Walnut Creek Arts + Rec (Pool Relay preview)</title>
+<meta name="description" content="Unofficial preview of the Walnut Creek aquatics pages with the lap-swim lane allocation table replaced by a live Pool Relay lane calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cyan:    #17b3d9;   /* the Arts + Rec nav bar */
+    --cyan-d:  #0f8ba8;
+    --charcoal:#333333;   /* active nav pill */
+    --gold:    #f5b921;   /* the "+" in the wordmark */
+    --ink:     #1f2326;
+    --muted:   #5e686d;
+    --rule:    #dcdfe1;
+    --wash:    #f3f5f6;
+    --card:    #ededed;
+    --warn-bg: #fff8e8;
+    --warn-br: #e8b23a;
+    --font:  "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --slab:  "Roboto Slab", Georgia, "Times New Roman", serif;
+  }
+  *,*::before,*::after{ box-sizing:border-box }
+  html{ -webkit-text-size-adjust:100% }
+  body{ margin:0; background:#fff; color:var(--ink); font-family:var(--font); font-size:17px; line-height:1.65 }
+  img{ max-width:100%; display:block }
+  a{ color:var(--cyan-d) }
+  h1,h2,h3{ font-family:var(--slab); line-height:1.2; margin:0 0 .5em }
+  h1{ font-size:clamp(30px,5vw,44px) }
+  h2{ font-size:clamp(22px,3.4vw,29px); margin-top:0 }
+  h3{ font-size:19px }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 22px }
+
+  /* ── Unofficial ribbon ─────────────────────────────────────────────────── */
+  .ribbon{
+    background:#22282b; color:#fff; font-size:14.5px; line-height:1.55;
+    padding:10px 20px; text-align:center;
+  }
+  .ribbon b{ color:var(--gold) }
+  .ribbon a{ color:#8fe3f5 }
+
+  /* ── Brand + nav ───────────────────────────────────────────────────────── */
+  .brandbar{ padding:20px 0 16px }
+  .brandbar .inner{ display:flex; align-items:center; gap:14px; flex-wrap:wrap }
+  .mark{
+    font-family:var(--slab); font-weight:700; letter-spacing:-.01em;
+    font-size:30px; line-height:1; color:#111;
+  }
+  .mark .city{ display:block; font-family:var(--font); font-weight:700; font-size:11px;
+    letter-spacing:.14em; color:var(--muted); margin-bottom:3px }
+  .mark .plus{ color:var(--gold) }
+  .brandbar .tel{ margin-left:auto; font-size:14px; color:var(--muted) }
+
+  nav.main{ background:var(--cyan) }
+  nav.main ul{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;
+    max-width:1080px; margin:0 auto }
+  nav.main a{
+    display:block; padding:13px 20px; color:#08343f; text-decoration:none;
+    font-weight:700; font-size:14.5px; letter-spacing:.05em; text-transform:uppercase;
+  }
+  nav.main a:hover{ background:rgba(255,255,255,.28) }
+  nav.main .on a{ background:var(--charcoal); color:#fff }
+
+  .crumb{ font-size:13.5px; color:var(--muted); letter-spacing:.04em;
+    text-transform:uppercase; padding:20px 0 4px; font-weight:600 }
+
+  section{ padding:12px 0 34px }
+  .lead{ font-size:19.5px; color:#3b4347 }
+
+  /* ── Cards, callouts ───────────────────────────────────────────────────── */
+  .status{
+    background:var(--card); border-left:5px solid var(--cyan);
+    padding:16px 20px; margin:0 0 26px;
+  }
+  .status p{ margin:.25em 0 }
+  .status .hd{ font-family:var(--slab); font-weight:700; font-size:17px }
+
+  .note{ border:1px solid var(--rule); border-left:5px solid var(--cyan);
+    background:var(--wash); padding:15px 19px; margin:20px 0; font-size:16px }
+  .note.warn{ background:var(--warn-bg); border-left-color:var(--warn-br) }
+  .note .hd{ font-weight:700; display:block; margin-bottom:.25em }
+
+  /* ── The calendar frame ────────────────────────────────────────────────── */
+  .cal{ border:1px solid var(--rule); border-radius:5px; overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,.07); background:#fff; margin:18px 0 10px }
+  .cal iframe{ width:100%; height:660px; border:0; display:block }
+  .cal.short iframe{ height:520px }
+  .capt{ font-size:14.5px; color:var(--muted); margin:0 0 26px }
+  .capt a{ color:var(--cyan-d) }
+
+  /* ── Tables ────────────────────────────────────────────────────────────── */
+  table.sched{ width:100%; border-collapse:collapse; margin:14px 0 8px; font-size:16px }
+  table.sched th, table.sched td{ border:1px solid var(--rule); padding:9px 12px; text-align:left }
+  table.sched th{ background:var(--wash); font-weight:700; font-size:14px;
+    text-transform:uppercase; letter-spacing:.04em }
+  table.sched td.n{ text-align:center; font-variant-numeric:tabular-nums; font-weight:600 }
+  .scroller{ overflow-x:auto }
+
+  /* ── Two-up ────────────────────────────────────────────────────────────── */
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:26px }
+  @media (max-width:820px){ .two{ grid-template-columns:1fr } }
+
+  .qa{ margin:0; padding:0; list-style:none }
+  .qa li{ border-top:1px solid var(--rule); padding:15px 0 }
+  .qa li:last-child{ border-bottom:1px solid var(--rule) }
+  .qa .q{ font-weight:700; font-family:var(--slab) }
+  .qa .a{ color:var(--muted); font-size:16px }
+  .tag{ display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.07em;
+    text-transform:uppercase; padding:2px 8px; border-radius:3px; vertical-align:2px;
+    margin-right:8px }
+  .tag.ours{ background:#fdecc8; color:#7a5200 }
+  .tag.clash{ background:#fbdcdc; color:#8e2020 }
+  .tag.gap{ background:#e2e6ea; color:#3d4a52 }
+
+  footer{ background:#22282b; color:#c6ced2; margin-top:40px; padding:30px 0 40px;
+    font-size:15px }
+  footer a{ color:#8fe3f5 }
+  footer .wrap > p{ margin:.4em 0 }
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <b>Unofficial preview.</b> Not a City of Walnut Creek page. A replica of the
+  <a href="https://www.walnutcreekartsrec.org/aquatics" target="_blank" rel="noopener">Walnut Creek Arts&nbsp;+&nbsp;Rec aquatics pages</a>
+  with the lap-swim lane table replaced by a live <a href="https://www.poolrelay.com" target="_blank" rel="noopener">Pool&nbsp;Relay</a> calendar.
+</div>
+
+<header class="brandbar">
+  <div class="wrap inner">
+    <div class="mark">
+      <span class="city">WALNUT CREEK</span>ARTS <span class="plus">+</span> REC
+    </div>
+    <div class="tel">Front desk (925)&nbsp;943-5859 &middot; aquatics@walnut-creek.org</div>
+  </div>
+</header>
+
+<nav class="main">
+  <ul>
+    <li><a href="https://www.walnutcreekartsrec.org/programs-activities" target="_blank" rel="noopener">Programs + Activities</a></li>
+    <li><a href="https://www.walnutcreekartsrec.org/parks-facilities" target="_blank" rel="noopener">Parks + Facilities</a></li>
+    <li class="on"><a href="#">Aquatics</a></li>
+    <li><a href="https://www.walnutcreekartsrec.org/seniors" target="_blank" rel="noopener">Seniors</a></li>
+    <li><a href="https://www.walnutcreekartsrec.org/about" target="_blank" rel="noopener">About</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+  <div class="crumb">Aquatics &raquo; Swim Center Hours &amp; Programs</div>
+  <h1>Clarke Memorial Swim Center</h1>
+  <p class="lead">Three outdoor pools in Heather Farm Park &mdash; a 50-meter pool open year round,
+  a 25-meter pool with a diving board, and a heated wading pool. 1750 Heather Dr, Walnut Creek.</p>
+
+  <div class="status">
+    <p class="hd">Status of pool openings and closures</p>
+    <p><strong>Clarke Swim Center:</strong> open for regular programming.</p>
+    <p><strong>Larkey Swim Center:</strong> closed for the season after Labor Day.</p>
+  </div>
+</div>
+
+<!-- ────────────────────────────────────────────────────────────────────── -->
+<section class="wrap">
+  <h2>The week in the water</h2>
+  <p>Every booking in all three pools, on one calendar. Use the <strong>Pools</strong> menu to move
+  between the 50-meter pool, the 25-meter pool and the wading pool.</p>
+
+  <div class="cal">
+    <iframe src="https://www.poolrelay.com/embed/bgGoKLrxK8AcpRaiffiEyG"
+            title="Clarke Memorial Swim Center — this week" loading="lazy"></iframe>
+  </div>
+  <p class="capt">Live from Pool Relay &middot;
+    <a href="https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG" target="_blank" rel="noopener">open the full calendar &rarr;</a>
+  </p>
+
+  <div class="note">
+    <span class="hd">What changed here</span>
+    The published page gives lap swim as a <em>table of lane counts</em> &mdash; 8 lanes, then 20, then 8,
+    then 14. It never says what the other lanes are doing, because the city does not run them: the
+    Masters team publishes its own practice times, on its own website. Put both on one calendar and
+    the numbers close exactly &mdash; <strong>8 public lanes + 12 Masters lanes = the 20-lane pool</strong>,
+    in every morning and midday band. The 8:00&ndash;10:30 block, where Masters is out of the water,
+    is the one time all 20 lanes are yours.
+  </div>
+
+  <div class="two">
+    <div>
+      <h3>What the page says today</h3>
+      <div class="scroller">
+      <table class="sched">
+        <thead><tr><th>Time</th><th>Config</th><th>Lanes for public lap swim</th></tr></thead>
+        <tbody>
+          <tr><td>5:30 &ndash; 8:00 am</td><td>Short course</td><td class="n">8</td></tr>
+          <tr><td>8:00 &ndash; 10:30 am</td><td>Short course</td><td class="n">20</td></tr>
+          <tr><td>10:30 am &ndash; 1:00 pm</td><td>Short course</td><td class="n">8</td></tr>
+          <tr><td>1:00 &ndash; 4:00 pm</td><td>Short course</td><td class="n">14</td></tr>
+          <tr><td>7:00 &ndash; 8:00 pm</td><td>Short course</td><td class="n">8</td></tr>
+          <tr><td>Weekends 11:00 am &ndash; 4:00 pm</td><td>Short course</td><td class="n">14</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="capt">A reader can find out how many lanes they get. Not when the pool is busiest,
+      not who else is in it, and not whether today is different.</p>
+    </div>
+    <div>
+      <h3>What the calendar adds</h3>
+      <ul>
+        <li><strong>The other twelve lanes.</strong> Masters practice appears beside lap swim instead of
+        being invisible.</li>
+        <li><strong>Which water.</strong> Lessons are in the wading pool or on 50m Lanes 1&ndash;2 &mdash;
+        a distinction the table cannot make.</li>
+        <li><strong>Today, not "usually".</strong> A four-week lesson session ends on its own date
+        rather than being deleted from a page by hand.</li>
+        <li><strong>Collisions.</strong> Two classes booked into one lane show up as a clash, not as a
+        surprise on deck.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────────── -->
+<section class="wrap">
+  <h2>Swim lessons &mdash; which bay, which level</h2>
+  <p>The wading pool runs three teaching bays side by side. The city's registration system knows
+  which bay each class is in; the aquatics page has never had anywhere to say so.</p>
+
+  <div class="cal short">
+    <iframe src="https://www.poolrelay.com/embed/EHMWrlAQ2CfgWIKRBXKQAC"
+            title="Learn-to-swim bays — Clarke Wading Pool" loading="lazy"></iframe>
+  </div>
+  <p class="capt">East, Middle and West bays &middot;
+    <a href="https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC" target="_blank" rel="noopener">open the full calendar &rarr;</a>
+    &nbsp;&mdash;&nbsp; Guppy, Seal, Dolphin and the private lessons run on 50m Lanes&nbsp;1&ndash;2 and
+    appear in the main calendar above.
+  </p>
+
+  <div class="scroller">
+  <table class="sched">
+    <thead><tr><th>Bay</th><th>Levels taught there</th><th>Tue &amp; Thu</th></tr></thead>
+    <tbody>
+      <tr><td>Wading &mdash; East</td><td>Level 2 Starfish</td><td>4:30 &middot; 5:50 &middot; 6:30</td></tr>
+      <tr><td>Wading &mdash; Middle</td><td>Level 3 Seahorse</td><td>4:30 &middot; 5:50</td></tr>
+      <tr><td>Wading &mdash; West</td><td>Level 4 Lobster</td><td>4:30 &middot; 5:10 &middot; 5:50 &middot; 6:30</td></tr>
+      <tr><td>50m Lane 1</td><td>Level 1 Guppy, Level 5 Seal, Level 6 Dolphin</td><td>5:10 &middot; 6:30</td></tr>
+      <tr><td>50m Lane 2</td><td>Private lessons</td><td>4:30 &middot; 5:05 &middot; 5:40 &middot; 6:15</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────────── -->
+<section class="wrap">
+  <h2>Larkey Swim Center &mdash; closed for the season</h2>
+  <p>Larkey is a summer pool: a 25&times;25 meter pool with a one-meter board, plus the all-abilities
+  sprayground. It ran weekends through Labor Day and is now closed.</p>
+
+  <div class="cal short">
+    <iframe src="https://www.poolrelay.com/embed/LSVJBxGGIxadLGeN6FzILO"
+            title="Larkey Swim Center — the summer week" loading="lazy"></iframe>
+  </div>
+  <p class="capt">This week is deliberately empty &mdash; the season is over. Page back with the
+    <strong>&lsaquo;</strong> control to any summer week to see recreational swim, sprayground-only
+    hours and the picnic rentals. &middot;
+    <a href="https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO" target="_blank" rel="noopener">open the full calendar &rarr;</a>
+  </p>
+
+  <div class="note warn">
+    <span class="hd">An honest limitation, not a feature</span>
+    A closed season currently renders as a blank week. The published page at least says
+    <em>"open weekends only through 9/7"</em> &mdash; a sentence someone has to remember to edit. The
+    calendar knows the real answer from its dates and should say <em>"closed for the season, reopens
+    Memorial Day"</em> instead of showing nothing. Logged as an improvement.
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────────────────────── -->
+<section class="wrap">
+  <h2>Questions for the aquatics office</h2>
+  <p>Everything on this page was transcribed from what Walnut Creek publishes. These are the places
+  where the published sources disagree, go quiet, or where we had to make a call &mdash; each one is
+  marked on the calendar entry itself.</p>
+
+  <ul class="qa">
+    <li>
+      <div class="q"><span class="tag clash">Conflict</span>Evening lap swim: Monday&ndash;Thursday, or Monday&ndash;Friday?</div>
+      <div class="a">The <em>Current Lap Swim Hours</em> box says Mon&ndash;Thu 7&ndash;8pm. The lane-allocation
+      table directly below it says Mon&ndash;Friday for the same band. Entered as Mon&ndash;Thu.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag clash">Conflict</span>Guppy and Seal are booked into the same lane at 5:10pm</div>
+      <div class="a">Class #85243 (Guppy) and #85260 (Seal) are both recorded on <em>50m Lane 01</em>,
+      Tuesdays and Thursdays at 5:10. That is the registration system's own data, across all four
+      session dates. Which one is actually in Lane 1?</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag clash">Conflict</span>Saturday 11:00 &mdash; lessons or lap swim on Lanes 1&ndash;2?</div>
+      <div class="a">The allocation table hands lanes 1&ndash;14 to lap swim from 11:00 on weekends,
+      while a Saturday Guppy class and two private lessons sit on Lanes 1 and 2. Pool Relay suggests
+      shifting lap swim to lanes 3&ndash;16, which is presumably what happens on deck &mdash; but the
+      page never says so.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag ours">Ours</span>How many lanes does Masters actually get?</div>
+      <div class="a">The team publishes times but never lanes. We entered 12 &mdash; the balance of the
+      20-lane short course after the city's published public allocation. It closes perfectly in every
+      weekday band, but the Saturday 9:30&ndash;10:45 practice has no published allocation to bound it
+      at all.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag gap">Gap</span>Is water exercise running?</div>
+      <div class="a">The page lists Tue/Wed/Thu at 8:15 (shallow) and 9:15 (deep), then says
+      <em>"unfortunately we do not have an instructor at this time."</em> Those slots are deliberately
+      <strong>not</strong> on the calendar &mdash; an event still holds water no matter what its
+      description says. Is the water held for them, or released to lap swim?</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag gap">Gap</span>Where do the four teams train?</div>
+      <div class="a">Walnut Creek Aquatics is home to the <strong>Aquabears</strong> (eight practice
+      groups, "practices daily at Clarke"), <strong>Masters</strong>, the <strong>Aquanuts</strong>
+      (who hold the 25-meter pool year round for synchro) and the summer <strong>Swim Club</strong>.
+      Only Masters publishes practice times. The other three occupy real water on a real schedule
+      that nothing public describes.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag gap">Gap</span>Weekend recreational swim &mdash; still running, and in which pool?</div>
+      <div class="a">The page lists recreational swim under both the 50-meter and the 25-meter pool.
+      We put it in the 25-meter pool, because the allocation table already commits 14 of the 20
+      short-course lanes to lap swim at that hour.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag ours">Ours</span>When do Larkey's weekday sprayground hours run?</div>
+      <div class="a">The $3 sprayground-only hours (Mon&ndash;Thu, 10:30&ndash;12:30 and 4:30&ndash;6:30)
+      are published without dates. We used the Memorial Day&ndash;Labor Day season that the swim pass
+      names, stopping before Labor Day itself &mdash; the center was weekends-only by September.</div>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Unofficial preview.</strong> Built to show what the Walnut Creek aquatics pages
+    would look like with a live lane calendar in place of a lane-count table. Not affiliated with
+    the City of Walnut Creek.</p>
+    <p>Schedules transcribed 16 September 2026 from walnutcreekartsrec.org, the city's PerfectMind
+    registration system, and swim4wc.org. Calendars by
+    <a href="https://www.poolrelay.com" target="_blank" rel="noopener">Pool Relay</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
