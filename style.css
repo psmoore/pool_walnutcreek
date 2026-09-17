@@ -1,0 +1,140 @@
+/* Walnut Creek Arts + Rec — Pool Relay preview.
+   Shared by the hub page, both facility pages and the four team pages. */
+
+:root{
+  --cyan:    #17b3d9;
+  --cyan-d:  #0f8ba8;
+  --charcoal:#333333;
+  --gold:    #f5b921;
+  --ink:     #1f2326;
+  --muted:   #5e686d;
+  --rule:    #dcdfe1;
+  --wash:    #f3f5f6;
+  --card:    #ededed;
+  --font:  "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --slab:  "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+*,*::before,*::after{ box-sizing:border-box }
+html{ -webkit-text-size-adjust:100% }
+body{ margin:0; background:#fff; color:var(--ink); font-family:var(--font); font-size:17px; line-height:1.65 }
+img{ max-width:100%; display:block }
+a{ color:var(--cyan-d) }
+h1,h2,h3{ font-family:var(--slab); line-height:1.2; margin:0 0 .5em }
+h1{ font-size:clamp(30px,5.4vw,48px); letter-spacing:-.01em }
+h2{ font-size:clamp(22px,3.4vw,30px); margin-top:0 }
+h3{ font-size:19px }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 22px }
+
+.ribbon{ background:#22282b; color:#fff; font-size:14.5px; line-height:1.55;
+  padding:10px 20px; text-align:center }
+.ribbon b{ color:var(--gold) }
+.ribbon a{ color:#8fe3f5 }
+
+.brandbar{ padding:20px 0 16px }
+.brandbar .inner{ display:flex; align-items:center; gap:14px; flex-wrap:wrap }
+.mark{ font-family:var(--slab); font-weight:700; letter-spacing:-.01em;
+  font-size:30px; line-height:1; color:#111; text-decoration:none }
+.mark .city{ display:block; font-family:var(--font); font-weight:700; font-size:11px;
+  letter-spacing:.14em; color:var(--muted); margin-bottom:3px }
+.mark .plus{ color:var(--gold) }
+.brandbar .tel{ margin-left:auto; font-size:14px; color:var(--muted) }
+
+nav.main{ background:var(--cyan) }
+nav.main ul{ list-style:none; margin:0 auto; padding:0; display:flex; flex-wrap:wrap;
+  max-width:1080px }
+nav.main a{ display:block; padding:13px 20px; color:#08343f; text-decoration:none;
+  font-weight:700; font-size:14.5px; letter-spacing:.05em; text-transform:uppercase }
+nav.main a:hover{ background:rgba(255,255,255,.28) }
+nav.main .on a{ background:var(--charcoal); color:#fff }
+
+/* Sub-nav across the seven preview pages. */
+nav.sub{ border-bottom:1px solid var(--rule); background:var(--wash) }
+nav.sub ul{ list-style:none; margin:0 auto; padding:0 22px; display:flex; flex-wrap:wrap;
+  gap:2px; max-width:1080px }
+nav.sub a{ display:block; padding:10px 13px; text-decoration:none; color:var(--muted);
+  font-weight:600; font-size:14px; border-bottom:3px solid transparent }
+nav.sub a:hover{ color:var(--cyan-d) }
+nav.sub .on a{ color:var(--ink); border-bottom-color:var(--cyan) }
+
+.crumb{ font-size:13.5px; color:var(--muted); letter-spacing:.04em;
+  text-transform:uppercase; padding:22px 0 4px; font-weight:600 }
+.crumb a{ color:var(--muted) }
+
+section{ padding:14px 0 36px }
+.lead{ font-size:20px; color:#3b4347 }
+.kicker{ font-family:var(--font); font-weight:700; font-size:12.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--cyan-d); margin:0 0 6px }
+.hero{ padding-top:10px }
+
+/* A week of twenty lanes needs more width than a column of prose does, so the
+   calendars break out of the text measure and center on the viewport. */
+.cal{ border:1px solid var(--rule); border-radius:5px; overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,.09); background:#fff; margin:20px 0 10px;
+  position:relative; left:50%; transform:translateX(-50%);
+  width:min(1460px, calc(100vw - 40px)) }
+.cal iframe{ width:100%; height:700px; border:0; display:block }
+.cal.short iframe{ height:560px }
+.capt{ font-size:14.5px; color:var(--muted); margin:0 0 26px }
+
+.note{ border:1px solid var(--rule); border-left:5px solid var(--cyan);
+  background:var(--wash); padding:16px 20px; margin:22px 0; font-size:16px }
+.note .hd{ font-weight:700; display:block; margin-bottom:.25em; font-family:var(--slab) }
+
+/* The dark band that carries a page's argument. */
+.trail{ background:#22282b; color:#e6ebee; padding:32px 0 36px }
+.trail h2{ color:#fff }
+.trail .q{ font-family:var(--slab); font-size:clamp(19px,2.6vw,25px); color:#fff;
+  margin:0 0 18px; font-weight:600 }
+.trail p{ color:#b9c3c9 }
+.trail ol, .trail ul{ margin:0; padding-left:22px; color:#b9c3c9; font-size:16px }
+.trail li{ margin:.4em 0 }
+.trail b, .trail strong{ color:#fff }
+.trail .answer{ margin-top:22px; padding:15px 19px; background:rgba(23,179,217,.14);
+  border-left:4px solid var(--cyan); color:#eaf6fa; font-size:16.5px }
+.trail .answer b{ color:#fff }
+
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:22px;
+  margin:18px 0 6px }
+.cards.pair{ grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); max-width:620px }
+.card{ background:var(--card); display:flex; flex-direction:column;
+  color:inherit; text-decoration:none }
+a.card:hover{ box-shadow:0 2px 12px rgba(0,0,0,.14) }
+.card .pic{ height:118px; background:linear-gradient(140deg,#5fc4dd,#0f8ba8);
+  border-bottom:5px solid var(--gold) }
+.card .pic.b{ background:linear-gradient(140deg,#7fd0a8,#2b8f68) }
+.card .pic.c{ background:linear-gradient(140deg,#f6c96b,#d98b1d) }
+.card .pic.d{ background:linear-gradient(140deg,#c9a6e8,#7b4fb0) }
+.card .pic.e{ background:linear-gradient(140deg,#8fb4e8,#2e5fa8) }
+.card .pic.f{ background:linear-gradient(140deg,#f2a3a3,#c04a4a) }
+.card .pic.g{ background:linear-gradient(140deg,#b6a2e0,#5b2c87) }
+.card .pic.h{ background:linear-gradient(140deg,#7fc7e8,#0070c0) }
+.card .pic.i{ background:linear-gradient(140deg,#d9b8ea,#af7ac5) }
+.card .pic.j{ background:linear-gradient(140deg,#8adad6,#16a5a5) }
+.card .body{ padding:15px 18px 18px }
+.card h3{ margin:0 0 .3em; font-size:19px }
+.card p{ margin:0; font-size:15.5px; color:#4a5459 }
+.card .already{ margin-top:11px; padding-top:10px; border-top:1px solid #d6d6d6;
+  font-size:14px; color:var(--cyan-d); font-weight:600 }
+
+table.sched{ width:100%; border-collapse:collapse; margin:14px 0 8px; font-size:16px }
+table.sched th, table.sched td{ border:1px solid var(--rule); padding:9px 12px; text-align:left }
+table.sched th{ background:var(--wash); font-weight:700; font-size:14px;
+  text-transform:uppercase; letter-spacing:.04em }
+table.sched td.n{ text-align:center; font-variant-numeric:tabular-nums; font-weight:600 }
+.scroller{ overflow-x:auto }
+
+.qa{ margin:0; padding:0; list-style:none }
+.qa li{ border-top:1px solid var(--rule); padding:15px 0 }
+.qa li:last-child{ border-bottom:1px solid var(--rule) }
+.qa .q{ font-weight:700; font-family:var(--slab) }
+.qa .a{ color:var(--muted); font-size:16px }
+.tag{ display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.07em;
+  text-transform:uppercase; padding:2px 8px; border-radius:3px; vertical-align:2px;
+  margin-right:8px }
+.tag.ours{ background:#fdecc8; color:#7a5200 }
+.tag.clash{ background:#fbdcdc; color:#8e2020 }
+.tag.gap{ background:#e2e6ea; color:#3d4a52 }
+
+footer{ background:#22282b; color:#c6ced2; margin-top:40px; padding:30px 0 40px; font-size:15px }
+footer a{ color:#8fe3f5 }
+footer .wrap > p{ margin:.4em 0 }

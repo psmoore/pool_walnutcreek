@@ -1,9 +1,9 @@
 # Walnut Creek Aquatics — Pool Relay embed preview
 
-A replica of the City of Walnut Creek
-[aquatics page](https://www.walnutcreekartsrec.org/aquatics) with **one live
-[Pool Relay](https://www.poolrelay.com) calendar placed above its six links** — both swim centers and
-every program, before you click anything.
+A seven-page replica of the City of Walnut Creek
+[aquatics section](https://www.walnutcreekartsrec.org/aquatics): the hub, both swim centers and all
+four teams, each with a live [Pool Relay](https://www.poolrelay.com) calendar **scoped to exactly
+what that page is about**.
 
 Not an official City of Walnut Creek page. It says so in a ribbon across the top.
 
@@ -52,14 +52,27 @@ Two independent sources reconciling to exactly 20 is much stronger evidence than
 and it is the reason this page exists. **The complement is the product.** A reader of the city's
 table cannot see it; a reader of the calendar cannot miss it.
 
-## The calendars
+## The seven pages
 
-| | |
-|---|---|
-| On the page | [`/embed/HCHCA8lwePKxAf6EXfIB3H`](https://www.poolrelay.com/v/HCHCA8lwePKxAf6EXfIB3H) — both centers, every program |
-| Clarke alone | [`/v/bgGoKLrxK8AcpRaiffiEyG`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) — with a Pools filter |
-| Wading-pool teaching bays | [`/v/EHMWrlAQ2CfgWIKRBXKQAC`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) |
-| Larkey alone | [`/v/LSVJBxGGIxadLGeN6FzILO`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) |
+| Page | Calendar it carries | Scoped to |
+|---|---|---|
+| `index.html` — Aquatics hub | [`HCHCA8lw…`](https://www.poolrelay.com/v/HCHCA8lwePKxAf6EXfIB3H) | both centers, every program, opens on **All** |
+| `clarke.html` | [`bgGoKLrx…`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) + [`EHMWrlAQ…`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) | Clarke, with a **Pools** filter; plus the three wading-pool teaching bays |
+| `larkey.html` | [`09tWnBhj…`](https://www.poolrelay.com/v/09tWnBhjtxeUm8scApEWFQ) | Larkey, **a month at a time** |
+| `aquabears.html` | Clarke's week | the water they train in — the team itself is absent, which is the point |
+| `masters.html` | [`BA51EP0Q…`](https://www.poolrelay.com/v/BA51EP0QyGuJFUr3YTLK4e) | the Masters group only — thirteen practices a week |
+| `aquanuts.html` | [`EJycPnzH…`](https://www.poolrelay.com/v/EJycPnzHYwjOEQFFYkpMlI) | the Clarke 25-meter pool only |
+| `wcsc.html` | both centers | a summer team, so its season sits outside the current window |
+
+Three of the four teams publish no practice times, so their pages show **the water they use** rather
+than an empty grid, and say plainly what is missing. A blank calendar is a bad first impression no
+matter how correctly blank it is; a full one with your team visibly absent from it is an argument.
+
+### Why Larkey is shown a month at a time
+
+An embed always opens on the current period — there is no date parameter — and Larkey's *week* is
+empty out of season. A **month** page filter means September still shows the season ending: the
+weekday sprayground hours, the last weekends, and the Labor Day opening.
 
 Each event square prints its group and its **lane count**, which is what makes the 8 + 12 complement
 legible at a glance.
@@ -142,10 +155,15 @@ These are marked on the page and on the calendar entries themselves.
 Sources: walnutcreekartsrec.org, the city's PerfectMind registration system (class times, lane and
 bay assignments), and swim4wc.org (Masters practice times).
 
-## Local preview
+## Building
+
+The chrome — ribbon, brand bar, the city's nav, the sub-nav, footer — is identical on all seven pages
+and lives in `build.py` rather than being pasted seven times. Edit `build.py` (or `style.css`), then:
 
 ```
+python3 build.py
 python3 -m http.server 8824
 ```
 
-Then open <http://localhost:8824/>.
+Then open <http://localhost:8824/>. Commit the generated `.html` files; GitHub Pages serves them as
+plain static files.
