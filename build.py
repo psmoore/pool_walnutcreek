@@ -631,6 +631,9 @@ MASTERS = f"""<section class="wrap hero">
 """
 
 # ══ 6. Aquanuts ═══════════════════════════════════════════════════════════════
+# The 25-meter pool publishes only two weekend afternoons, so the argument goes ABOVE
+# the calendar here. A reader who meets the empty weekday grid first reads it as broken;
+# a reader who has been told what it proves reads the same grid as the evidence.
 AQUANUTS = f"""<section class="wrap hero">
   <div class="crumb"><a href="index.html">Aquatics</a> &raquo; Competitive Swim Teams</div>
   <h1>Walnut Creek Aquanuts</h1>
@@ -638,28 +641,29 @@ AQUANUTS = f"""<section class="wrap hero">
   <p class="lead">One of the most acclaimed teams in international synchronized swimming, and home of
   Olympic champions. A year-round program for swimmers of all ages and abilities. Head coach Kim
   Probst, (925)&nbsp;934-4792.</p>
-
-{cal("pool25", "Clarke 25-Meter Pool — the public week", short=True,
-     caption="The 25-meter pool as the public can currently see it.")}
 </section>
 
 <div class="trail">
   <div class="wrap">
     <h2>A pool held year round, and a week that shows two weekend afternoons</h2>
     <p>The city's own description of Clarke says the 25-meter pool <i>&ldquo;is used year-round for
-    synchronized swim practice.&rdquo;</i> The calendar above is everything that pool currently
-    publishes: recreational swim at the weekend, and nothing else.</p>
-    <p>That gap is not a mistake in the calendar. It is an accurate picture of what Walnut Creek
-    publishes about a pool that one of the most decorated synchro programs in the world trains in
-    every week of the year.</p>
+    synchronized swim practice.&rdquo;</i></p>
+    <p>Below is everything that pool currently publishes: recreational swim on Saturday and Sunday
+    afternoons, and nothing else in the entire week. <b>Every weekday is blank</b> &mdash; not because
+    the pool is empty, but because nothing about the Aquanuts' use of it is written down anywhere the
+    public can read.</p>
     <p class="answer">For the Aquanuts the argument is simple: <b>a pool you hold year round should
     look held.</b> Families planning around practice, the city planning around rentals, and anyone
-    wondering whether the 25-meter pool is free on a Wednesday are all currently guessing.</p>
+    wondering whether the 25-meter pool is free on a Wednesday are all guessing today.</p>
   </div>
 </div>
 
 <section class="wrap">
-  <h2>What is already set up</h2>
+  <h2>The 25-meter pool, as published</h2>
+{cal("pool25", "Clarke 25-Meter Pool — the public week", short=True,
+     caption="Scroll to midday for the two weekend blocks. The weekday columns really are that empty.")}
+
+  <h2 style="margin-top:20px">What is already set up</h2>
   <p>The Aquanuts exist in Pool Relay as their own organization, and the 25-meter pool exists as its
   own water at Clarke. Practice times are the only missing piece &mdash; the team publishes none, and
   its website could not be read at all when this page was built.</p>
