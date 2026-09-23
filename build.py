@@ -21,6 +21,7 @@ EMBED = {
     "bays":     "EHMWrlAQ2CfgWIKRBXKQAC",   # the three wading-pool teaching bays
     "masters":  "BA51EP0QyGuJFUr3YTLK4e",   # Walnut Creek Masters only
     "pool25":   "EJycPnzHYwjOEQFFYkpMlI",   # the 25-meter pool only
+    "aquabears": "wKD0ntMPC3NHvJpTSSm96g",  # the Aquabears and their eight practice groups
 }
 
 NAV = [
@@ -524,16 +525,16 @@ AQUABEARS = f"""<section class="wrap hero">
   Mike Heaney, (925)&nbsp;939-5990. The team practices daily at Clarke Memorial Swim Center in Heather
   Farm Park.</p>
 
-{cal("clarke", "Clarke Memorial Swim Center — this week",
-     caption="Clarke's published week. Every block here is somebody else's.")}
+{cal("aquabears", "Walnut Creek Aquabears — the practice week",
+     caption="The team's own calendar. Clarke's heater is out, so through October 1 the whole team practices at Larkey.")}
 </section>
 
 <div class="trail">
   <div class="wrap">
     <h2>Eight groups, in the water daily, on no public schedule</h2>
-    <p>The calendar above is everything Clarke publishes: lap swim, Masters, lessons, weekend
-    recreation. It is complete, and the Aquabears are <b>not in it</b> &mdash; not because they are not
-    there, but because their practice times are behind a member login.</p>
+    <p>The calendar above is the team&rsquo;s own. This week it holds the whole-team practices that
+    moved to Larkey while Clarke&rsquo;s heater is out &mdash; but not the eight practice groups, whose
+    times are behind a member login.</p>
     <p>The team's own progression chart says what the commitment is. Each group is offered five to
     eight practices a week, of sixty to a hundred and twenty minutes, every one of them in Clarke
     water that the city is simultaneously publishing as a lane count.</p>

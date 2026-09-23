@@ -59,13 +59,14 @@ table cannot see it; a reader of the calendar cannot miss it.
 | `index.html` — Aquatics hub | [`HCHCA8lw…`](https://www.poolrelay.com/v/HCHCA8lwePKxAf6EXfIB3H) | both centers, every program, opens on **All** |
 | `clarke.html` | [`bgGoKLrx…`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) + [`EHMWrlAQ…`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) | Clarke, with a **Pools** filter; plus the three wading-pool teaching bays |
 | `larkey.html` | [`LSVJBxGG…`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) | Larkey, **a week at a time** |
-| `aquabears.html` | Clarke's week | the water they train in — the team itself is absent, which is the point |
+| `aquabears.html` | [`wKD0ntMP…`](https://www.poolrelay.com/v/wKD0ntMPC3NHvJpTSSm96g) | the Aquabears and their eight practice groups |
 | `masters.html` | [`BA51EP0Q…`](https://www.poolrelay.com/v/BA51EP0QyGuJFUr3YTLK4e) | the Masters group only — thirteen practices a week |
 | `aquanuts.html` | [`EJycPnzH…`](https://www.poolrelay.com/v/EJycPnzHYwjOEQFFYkpMlI) | the Clarke 25-meter pool only |
 | `wcsc.html` | both centers | a summer team, so its season sits outside the current window |
 
-Three of the four teams publish no practice times, so their pages show **the water they use** rather
-than an empty grid, and say plainly what is missing. A blank calendar is a bad first impression no
+Three of the four teams publish no practice times. The Aquanuts and Swim Club pages show **the water
+they use** rather than an empty grid, and say plainly what is missing; the Aquabears page carries the
+team's own calendar, which holds only the whole-team practices entered so far. A blank calendar is a bad first impression no
 matter how correctly blank it is; a full one with your team visibly absent from it is an argument.
 
 ### Larkey, a week at a time
