@@ -161,10 +161,21 @@ QUESTIONS = """<section class="wrap">
       description says. Is the water still reserved, or released to lap swim?</div>
     </li>
     <li>
-      <div class="q"><span class="tag gap">Gap</span>Where do three of the four teams train?</div>
-      <div class="a">Only Masters publishes practice times. The Aquabears, the Aquanuts and the summer
+      <div class="q"><span class="tag gap">Gap</span>Where do the Aquanuts and the Swim Club train?</div>
+      <div class="a">Masters and the Aquabears publish practice times. The Aquanuts and the summer
       Swim Club occupy real water on a real schedule that nothing public describes &mdash; see their
       pages above.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag clash">Conflict</span>Senior Aquabears at 5:30am &mdash; which water?</div>
+      <div class="a">The team publishes Senior practice Tuesday and Friday, 5:30&ndash;7:00&nbsp;a.m. At that
+      hour the city&rsquo;s lane table gives all twenty lanes to lap swim (8) and Masters (12). Those two
+      practices are <strong>not</strong> on the calendar until someone says which schedule is right.</div>
+    </li>
+    <li>
+      <div class="q"><span class="tag ours">Ours</span>Aquabears lane counts</div>
+      <div class="a">The team publishes times but never lanes. We split the 20 short-course lanes between
+      the groups in the water: Senior and Purple on Lanes 1&ndash;10, Gold on 11&ndash;20.</div>
     </li>
     <li>
       <div class="q"><span class="tag gap">Gap</span>Weekend recreational swim &mdash; still running, and in which pool?</div>
@@ -450,13 +461,13 @@ CLARKE = f"""<section class="wrap hero">
 LARKEY = f"""<section class="wrap hero">
   <div class="crumb"><a href="index.html">Aquatics</a> &raquo; Swim Centers</div>
   <h1>Larkey Swim Center</h1>
-  <p class="kicker">Summer season &middot; standing in for Clarke through October&nbsp;1</p>
+  <p class="kicker">Summer season &middot; Clarke&rsquo;s stand-in, September&nbsp;23 &ndash; October&nbsp;1</p>
   <p class="lead">A 25&times;25 meter heated pool with a one-meter diving board, and an accessible
   all-abilities sprayground with slides and waterfalls. 2771 Buena Vista Ave, Walnut Creek.
   Front desk (925)&nbsp;943-5861.</p>
 
 {cal("larkey", "Larkey Swim Center — the summer week",
-     caption="Shown a week at a time. Clarke's heater is out, so through October 1 its Masters, lap swim and Aquabears practices are here instead.")}
+     caption="Shown a week at a time. From September 23 to October 1 Larkey hosts Clarke's Masters, lap swim and Aquabears during Clarke's heater repair; after that it is closed until Memorial Day.")}
 </section>
 
 <div class="trail">
@@ -526,19 +537,19 @@ AQUABEARS = f"""<section class="wrap hero">
   Farm Park.</p>
 
 {cal("aquabears", "Walnut Creek Aquabears — the practice week",
-     caption="The team's own calendar. Clarke's heater is out, so through October 1 the whole team practices at Larkey.")}
+     caption="The team's own calendar: the eight practice groups at Clarke, and the whole team at Larkey from September 23 to October 1 during Clarke's heater repair.")}
 </section>
 
 <div class="trail">
   <div class="wrap">
-    <h2>Eight groups, in the water daily, on no public schedule</h2>
-    <p>The calendar above is the team&rsquo;s own. This week it holds the whole-team practices that
-    moved to Larkey while Clarke&rsquo;s heater is out &mdash; but not the eight practice groups, whose
-    times are behind a member login.</p>
+    <h2>Eight groups, in the water daily, in lanes nobody publishes</h2>
+    <p>The calendar above is the team&rsquo;s own. The team publishes each group&rsquo;s practice times
+    &mdash; but not which water it uses, and the city&rsquo;s lane table does not mention the team at
+    all.</p>
     <p>The team's own progression chart says what the commitment is. Each group is offered five to
     eight practices a week, of sixty to a hundred and twenty minutes, every one of them in Clarke
     water that the city is simultaneously publishing as a lane count.</p>
-    <p class="answer">Put the eight groups on the same calendar and three things become true at once:
+    <p class="answer">With the eight groups on the same calendar, three things are true at once:
     <b>a parent sees which lanes their swimmer is in, the city sees what its pool is actually
     committed to, and lap swimmers stop guessing</b> which twelve lanes are gone this afternoon.</p>
   </div>
@@ -566,10 +577,12 @@ AQUABEARS = f"""<section class="wrap hero">
   qualifying times &mdash; the chart maps every route.</p>
 
   <div class="note">
-    <span class="hd">What is missing, and where it would go</span>
-    Group names, ages and practice counts are public. <strong>Clock times and lane assignments are
-    not.</strong> Those are exactly what the calendar above is shaped to hold: each group is already
-    set up in Pool Relay, waiting for its times.
+    <span class="hd">What we had to assume, and what does not fit</span>
+    Group names, ages, practice counts and clock times are public. <strong>Lane assignments are
+    not</strong>, so the lanes on the calendar are ours: the 20 short-course lanes split between the
+    groups in the water. And one published practice does not fit &mdash; Senior&rsquo;s Tuesday and Friday
+    5:30&ndash;7:00&nbsp;a.m., when the city&rsquo;s lane table gives every lane to lap swim and Masters. It
+    is left off the calendar until someone says which schedule is right.
   </div>
 
   <p><a href="https://www.gomotionapp.com/team/wcab/page/home" target="_blank" rel="noopener">Walnut Creek Aquabears website &rarr;</a></p>

@@ -64,9 +64,10 @@ table cannot see it; a reader of the calendar cannot miss it.
 | `aquanuts.html` | [`EJycPnzH…`](https://www.poolrelay.com/v/EJycPnzHYwjOEQFFYkpMlI) | the Clarke 25-meter pool only |
 | `wcsc.html` | both centers | a summer team, so its season sits outside the current window |
 
-Three of the four teams publish no practice times. The Aquanuts and Swim Club pages show **the water
-they use** rather than an empty grid, and say plainly what is missing; the Aquabears page carries the
-team's own calendar, which holds only the whole-team practices entered so far. A blank calendar is a bad first impression no
+Two of the four teams publish no practice times, so the Aquanuts and Swim Club pages show **the water
+they use** rather than an empty grid, and say plainly what is missing. The Aquabears page carries the
+team's own calendar: its eight practice groups at Clarke from October 2, 2026, taken from the team's
+public [practice-times table](https://www.gomotionapp.com/team/wcab/page/swim-team-info). A blank calendar is a bad first impression no
 matter how correctly blank it is; a full one with your team visibly absent from it is an argument.
 
 ### Larkey, a week at a time
@@ -139,7 +140,9 @@ These are marked on the page and on the calendar entries themselves.
 | **Conflict** | Does Saturday lap swim shift off Lanes 1–2 at 11:00 for the lessons? |
 | **Ours** | Masters lane count. We entered 12 as the balance of the 20-lane short course; the team publishes times but never lanes. The Saturday 9:30–10:45 practice has no published allocation to bound it at all. |
 | **Gap** | Water exercise — the page lists Tue/Wed/Thu 8:15 shallow and 9:15 deep, then says *"we do not have an instructor at this time."* Deliberately **not** entered: an event holds water no matter what its description says. Is the water still reserved? |
-| **Gap** | Practice times for three of the four teams. **Aquabears** (eight groups, "practices daily at Clarke"), **Aquanuts** (holding the 25m pool year round for synchro) and the summer **Swim Club** publish none. Only Masters does. |
+| **Gap** | Practice times for two of the four teams. **Aquanuts** (holding the 25m pool year round for synchro) and the summer **Swim Club** publish none. Masters and the Aquabears do. |
+| **Conflict** | Aquabears Senior practice Tue/Fri 5:30–7:00 am: the city's lane table gives all 20 lanes to lap swim (8) and Masters (12). Not entered until resolved. |
+| **Ours** | Aquabears lane counts. The team publishes times, never lanes; we split the 20 short-course lanes between the groups in the water (Senior and Purple on 1–10, Gold on 11–20). |
 | **Gap** | Weekend rec swim — still running, and in the 50m or the 25m pool? The page lists it under both. |
 | **Ours** | Larkey's weekday sprayground-only hours are published without dates. We used the Memorial Day–Labor Day season the swim pass names. |
 
