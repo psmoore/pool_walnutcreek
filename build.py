@@ -17,7 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 EMBED = {
     "hub":      "HCHCA8lwePKxAf6EXfIB3H",   # both centers, every program
     "clarke":   "bgGoKLrxK8AcpRaiffiEyG",   # Clarke, with a Pools filter
-    "larkey":   "09tWnBhjtxeUm8scApEWFQ",   # Larkey, month at a time
+    "larkey":   "LSVJBxGGIxadLGeN6FzILO",   # Larkey, a week at a time
     "bays":     "EHMWrlAQ2CfgWIKRBXKQAC",   # the three wading-pool teaching bays
     "masters":  "BA51EP0QyGuJFUr3YTLK4e",   # Walnut Creek Masters only
     "pool25":   "EJycPnzHYwjOEQFFYkpMlI",   # the 25-meter pool only
@@ -449,19 +449,19 @@ CLARKE = f"""<section class="wrap hero">
 LARKEY = f"""<section class="wrap hero">
   <div class="crumb"><a href="index.html">Aquatics</a> &raquo; Swim Centers</div>
   <h1>Larkey Swim Center</h1>
-  <p class="kicker">Summer only &middot; closed until Memorial Day</p>
+  <p class="kicker">Summer season &middot; standing in for Clarke through October&nbsp;1</p>
   <p class="lead">A 25&times;25 meter heated pool with a one-meter diving board, and an accessible
   all-abilities sprayground with slides and waterfalls. 2771 Buena Vista Ave, Walnut Creek.
   Front desk (925)&nbsp;943-5861.</p>
 
-{cal("larkey", "Larkey Swim Center — the season, month by month",
-     caption="Shown a month at a time. September is the season ending: weekday sprayground hours, then the last weekends, then the Labor Day opening.")}
+{cal("larkey", "Larkey Swim Center — the summer week",
+     caption="Shown a week at a time. Clarke's heater is out, so through October 1 its Masters, lap swim and Aquabears practices are here instead.")}
 </section>
 
 <div class="trail">
   <div class="wrap">
     <h2>The season ends on a date, not on somebody remembering</h2>
-    <p>Larkey closed after Labor Day and its calendar closed with it, because the whole season was
+    <p>Larkey&rsquo;s summer season ended after Labor Day and its calendar ended with it, because the whole season was
     entered as <b>dates</b> rather than as a sentence on a web page.</p>
     <p>Nobody has to go back in September and edit <i>&ldquo;open weekends only through 9/7&rdquo;</i>
     off the site. Nobody has to retype the summer next May. Recreational swim, the $3 sprayground

@@ -58,7 +58,7 @@ table cannot see it; a reader of the calendar cannot miss it.
 |---|---|---|
 | `index.html` — Aquatics hub | [`HCHCA8lw…`](https://www.poolrelay.com/v/HCHCA8lwePKxAf6EXfIB3H) | both centers, every program, opens on **All** |
 | `clarke.html` | [`bgGoKLrx…`](https://www.poolrelay.com/v/bgGoKLrxK8AcpRaiffiEyG) + [`EHMWrlAQ…`](https://www.poolrelay.com/v/EHMWrlAQ2CfgWIKRBXKQAC) | Clarke, with a **Pools** filter; plus the three wading-pool teaching bays |
-| `larkey.html` | [`09tWnBhj…`](https://www.poolrelay.com/v/09tWnBhjtxeUm8scApEWFQ) | Larkey, **a month at a time** |
+| `larkey.html` | [`LSVJBxGG…`](https://www.poolrelay.com/v/LSVJBxGGIxadLGeN6FzILO) | Larkey, **a week at a time** |
 | `aquabears.html` | Clarke's week | the water they train in — the team itself is absent, which is the point |
 | `masters.html` | [`BA51EP0Q…`](https://www.poolrelay.com/v/BA51EP0QyGuJFUr3YTLK4e) | the Masters group only — thirteen practices a week |
 | `aquanuts.html` | [`EJycPnzH…`](https://www.poolrelay.com/v/EJycPnzHYwjOEQFFYkpMlI) | the Clarke 25-meter pool only |
@@ -68,11 +68,13 @@ Three of the four teams publish no practice times, so their pages show **the wat
 than an empty grid, and say plainly what is missing. A blank calendar is a bad first impression no
 matter how correctly blank it is; a full one with your team visibly absent from it is an argument.
 
-### Why Larkey is shown a month at a time
+### Larkey, a week at a time
 
-An embed always opens on the current period — there is no date parameter — and Larkey's *week* is
-empty out of season. A **month** page filter means September still shows the season ending: the
-weekday sprayground hours, the last weekends, and the Labor Day opening.
+Larkey was first shown a **month** at a time, because an embed always opens on the current period
+and Larkey's *week* is empty out of season. It is now the **"Larkey Swim Center — the summer week"**
+tab instead (2026-09-23): Clarke's heater failed, its Masters, lap swim and Aquabears practices moved
+to Larkey from September 23 through October 1, and a week is the view that shows that move.
+Out of season, the week view will be empty again.
 
 Each event square prints its group and its **lane count**, which is what makes the 8 + 12 complement
 legible at a glance.
